@@ -1,0 +1,79 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5022"
+  },
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Product",
+      "UpstreamPathTemplate": "/gatway/products",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7143
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Product/{id}",
+      "UpstreamPathTemplate": "/gatway/products/{id}",
+      "UpstreamHttpMethod": [ "PUT", "DELETE" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7143
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Order",
+      "UpstreamPathTemplate": "/gatway/orders",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7176
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Order/{id}",
+      "UpstreamPathTemplate": "/gatway/orders/{id}",
+      "UpstreamHttpMethod": [ "PUT", "DELETE" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7176
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer",
+      "UpstreamPathTemplate": "/gatway/Customers",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7198
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customer/{id}",
+      "UpstreamPathTemplate": "/gatway/Customers/{id}",
+      "UpstreamHttpMethod": [ "PUT", "DELETE" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7198
+        }
+      ]
+    }
+  ]
+}
